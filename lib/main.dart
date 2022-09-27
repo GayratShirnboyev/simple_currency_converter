@@ -87,7 +87,11 @@ class _MyAppState extends State<MyApp> {
                     ),
                     IconButton(
                       padding: EdgeInsets.zero,
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          toCurrency = fromCurrency;
+                        });
+                      },
                       icon: Icon(
                         Icons.sync_alt,
                         size: 50,

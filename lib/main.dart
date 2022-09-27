@@ -18,6 +18,8 @@ TextEditingController text1 = TextEditingController(text: '');
 class _MyAppState extends State<MyApp> {
   String name = '0';
   double a = 0;
+  String toCurrency = '🇺🇸';
+  String fromCurrency = '🇺🇿';
 
   func() {
     a = double.parse(text1.text) * 0.00011085;
@@ -78,21 +80,25 @@ class _MyAppState extends State<MyApp> {
                       children: [
                         Text('From'),
                         Text(
-                          '🇺🇿',
+                          fromCurrency,
                           style: TextStyle(fontSize: 60),
                         ),
                       ],
                     ),
-                    Icon(
-                      Icons.sync_alt,
-                      size: 60,
+                    IconButton(
+                      padding: EdgeInsets.zero,
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.sync_alt,
+                        size: 50,
+                      ),
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('To'),
                         Text(
-                          '🇺🇸',
+                          toCurrency,
                           style: TextStyle(fontSize: 60),
                         ),
                       ],

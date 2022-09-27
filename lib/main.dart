@@ -89,7 +89,9 @@ class _MyAppState extends State<MyApp> {
                       padding: EdgeInsets.zero,
                       onPressed: () {
                         setState(() {
+                          String tmp = toCurrency;
                           toCurrency = fromCurrency;
+                          fromCurrency = tmp;
                         });
                       },
                       icon: Icon(
